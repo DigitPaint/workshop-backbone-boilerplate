@@ -5,7 +5,7 @@
 This example requires to be run in a webserver. To get you started you can using the following:
 
 ```shell
-git clone git@github.com:DigitPaint/workshop-backbone-boilerplate.git
+git clone https://github.com/DigitPaint/workshop-backbone-boilerplate
 cd workshop-backbone-boilerplate
 ruby -rwebrick -e'WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd).start'
 ```
