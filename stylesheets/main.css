@@ -1,0 +1,8 @@
+
+/* Some example styling outside bootstrap */
+body > footer{
+  border-top: 1px solid #e5e5e5;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+}

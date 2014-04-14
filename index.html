@@ -15,9 +15,41 @@
     <link rel="stylesheet" href="stylesheets/main.css">
   </head>
   <body>
-    <!-- Placeholder for backbone -->
-    <div id="app"></div>
+    <header class="navbar navbar-static-top" id="top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- Responsive navbar -->
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand">Workshop Bootstrap</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="../getting-started">Getting started</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#help">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
+    <!-- Placeholder for backbone -->
+    <div id="app">
+      <p class="container">App will be loaded here!</p>
+    </div>
+
+    <footer>
+      <div class="container">
+        Backbone workshop
+      </div>  
+    </footer>
 
     <!--  ===============  -->
     <!--  = Javascripts =  -->
@@ -25,23 +57,38 @@
 
     <!-- Include libraries -->
     <script src="//code.jquery.com/jquery-1.11.0.js"></script>
+    <script src="/javascripts/vendor/bootstrap.js"></script>
     <script src="/javascripts/vendor/underscore.js"></script>
     <script src="/javascripts/vendor/backbone.js"></script>
 
     <!-- Create namespace for Workshop objects -->
     <script>
-      window.Workshop = {};
+      window.App = {};
     </script>
 
-    <!-- Backbone assets -->
+    
+    <!-- Routes -->
+    <script src="/javascripts/routes.js"></script>
 
     <!-- Models -->
+    <script src="/javascripts/models/search.js"></script>
 
-    <!-- View controllers-->
+
+
+    <!-- Collection -->
+    <script src="/javascripts/collections/search.js"></script>
 
     <!-- Templates -->
+    <script type="text/template" id="root-view">
+      <div class="jumbotron container">
+        <h1><%= title %></h1>
+        <p><%= body %></p>
+      </div>
+    </script>
 
     <!-- Views -->
+    <script src="/javascripts/views/root.js"></script>
+    <script src="/javascripts/views/search.js"></script>
 
 
     <!--  Site.js -->
