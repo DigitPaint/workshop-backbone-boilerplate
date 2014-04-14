@@ -6,3 +6,24 @@ body > footer{
   padding-bottom: 40px;
   margin-top: 40px;
 }
+
+.results{
+  margin: 20px 0;
+}
+
+.results table{
+  table-layout: fixed;
+}
+
+.results table .medium{
+  width: 20%;
+}
+
+.results table .small{
+  width: 10%;
+}
+
+
+#playlist-view{
+  background: #eee;
+}
