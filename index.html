@@ -30,7 +30,7 @@
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul class="nav navbar-nav">
             <li>
-              <a href="../getting-started">Getting started</a>
+              <a href="/?/#search">Search</a>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -66,10 +66,6 @@
       window.App = {};
     </script>
 
-    
-    <!-- Routes -->
-    <script src="/javascripts/routes.js"></script>
-
     <!-- Models -->
     <script src="/javascripts/models/search.js"></script>
 
@@ -80,16 +76,63 @@
 
     <!-- Templates -->
     <script type="text/template" id="root-view">
-      <div class="jumbotron container">
+      <div class="jumbotron">
         <h1><%= title %></h1>
         <p><%= body %></p>
       </div>
     </script>
 
+    <script type="text/template" id="app-view">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8" id="content-view">
+          </div>
+          <div class="col-md-4" id="playlist-view">
+            <h2>Playlist</h2>
+          </div>
+        </div>
+      </div>
+    </script>
+
+    <script type="text/template" id="search-view">
+      <h1>Search</h1>
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <label class="sr-only" for="q">Search keyword</label>
+          <input type="text" class="form-control" name="q" placeholder="Search keyword">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+      <div class="results">
+        
+      </div>
+    </script>
+
+    
+
+    <script type="text/template" id="search-results">
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Artist</th>
+            <th>Trackname</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </script>
+
+    
     <!-- Views -->
+    <script src="/javascripts/views/app.js"></script>
     <script src="/javascripts/views/root.js"></script>
     <script src="/javascripts/views/search.js"></script>
 
+    <!-- Routes -->
+    <script src="/javascripts/routes.js"></script>
 
     <!--  Site.js -->
     <script src="javascripts/app.js"></script>

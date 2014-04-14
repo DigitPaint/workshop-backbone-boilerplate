@@ -1,16 +1,19 @@
 (function(){
 
+  var appView = new App.AppView({el: "#app"});
+  var searchView = new App.SearchView({el: appView.content});
+
   App.Router = Backbone.Router.extend({
 
     routes: {
       "":                 "root",
-      "help":             "help",    // #help
       "search":          "search",  // #search/kiwis
       "search/:query":    "search"  // #search/kiwis
     },
 
     root: function(){
-      new App.RootView({el: "#app"}).render();
+      // Add rootView to content of appView
+      new App.RootView({el: appView.content }).render();
     },
 
     help: function(){
@@ -18,7 +21,7 @@
     },
 
     search: function(query){
-      new App.SearchView();
+      searchView.render();
     }
 
   });
