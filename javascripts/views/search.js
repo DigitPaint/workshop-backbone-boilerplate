@@ -53,7 +53,7 @@
       this.$el.html(this.template(this.model.attributes));
       return this;
     },
-    play: function(){
+    play: function(event){
       alert("Add to playlist and play!");
       return event.preventDefault();
     }
